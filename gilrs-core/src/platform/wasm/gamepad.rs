@@ -438,6 +438,10 @@ pub mod native_ev_codes {
     pub const BTN_DPAD_LEFT: EvCode = EvCode(29);
     pub const BTN_DPAD_RIGHT: EvCode = EvCode(30);
 
+    pub fn make_ev(code: u8) -> EvCode {
+        EvCode(code)
+    }
+
     pub(super) static BUTTONS: [EvCode; 17] = [
         BTN_SOUTH,
         BTN_EAST,

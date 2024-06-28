@@ -442,8 +442,8 @@ use serde::{Deserialize, Serialize};
 #[cfg_attr(feature = "serde-serialize", derive(Serialize, Deserialize))]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd, Hash)]
 pub struct EvCode {
-    page: u32,
-    usage: u32,
+    pub page: u32,
+    pub usage: u32,
 }
 
 impl EvCode {
