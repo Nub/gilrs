@@ -31,7 +31,7 @@ use serde::{Deserialize, Serialize};
 /// Linux and deserialize it on Windows. This also apply to `Display` implementation.
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Hash)]
 #[cfg_attr(feature = "serde-serialize", derive(Serialize, Deserialize))]
-pub struct Code(pub(crate) gilrs_core::EvCode);
+pub struct Code(pub gilrs_core::EvCode);
 
 impl Display for Code {
     fn fmt(&self, f: &mut Formatter<'_>) -> FmtResult {
