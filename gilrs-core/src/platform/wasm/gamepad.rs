@@ -372,7 +372,7 @@ impl Gamepad {
 
 #[cfg_attr(feature = "serde-serialize", derive(Serialize, Deserialize))]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd, Hash)]
-pub struct EvCode(u8);
+pub struct EvCode(pub u8);
 
 impl EvCode {
     pub fn into_u32(self) -> u32 {
