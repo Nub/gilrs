@@ -227,7 +227,7 @@ use serde::{Deserialize, Serialize};
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd, Hash)]
 #[cfg_attr(feature = "serde-serialize", derive(Serialize, Deserialize))]
 #[repr(transparent)]
-pub struct EvCode(platform::EvCode);
+pub struct EvCode(pub platform::EvCode);
 
 impl EvCode {
     pub fn into_u32(self) -> u32 {
